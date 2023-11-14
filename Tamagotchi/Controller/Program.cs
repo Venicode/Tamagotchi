@@ -5,10 +5,16 @@
 
 using RestSharp;
 using Newtonsoft.Json;
+
 class Program
 {
+    
     static void Main(string[] args)
     {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.BackgroundColor = ConsoleColor.Blue;
+        Console.Beep();
+        Console.Clear();
         //Menu de seleção
         Menu mostrarMenu = new Menu();
         mostrarMenu.Mensagem();
@@ -27,7 +33,8 @@ class Program
                 }
             case 2:
                 {
-                    Console.WriteLine("Opção ainda em desenvolvimento.");
+                    MascotesAdotados mostrarMascotes = new();
+                    mostrarMascotes.MostrarMascotesAdotados();
                     break;
                 }
             case 3:
