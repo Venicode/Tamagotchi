@@ -24,7 +24,7 @@ class Mascote
 
         //Com o índice da lista, acessar a API de cada Pokémon
         Console.WriteLine("\nEscolha um Pokémon do menu para ver seus detalhes:");
-        int escolha = int.Parse(Console.ReadLine()!.ToLower());
+        int escolha = int.Parse(Console.ReadLine()!);
         string pokemonSelecionado = especiesPokemons.Results[escolha].Name;
         var client2 = new RestClient($"https://pokeapi.co/api/v2/pokemon/{pokemonSelecionado}");
         var request2 = new RestRequest("", Method.Get);
