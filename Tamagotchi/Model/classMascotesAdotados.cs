@@ -1,10 +1,12 @@
 ﻿class MascotesAdotados {
 
-    public List<string> Mascotes { get; set; }
+    public Mascote NovoMascote { get; set; }
 
-    public void AdotarMascotes(string mascote)
+    public List<Mascote> Mascotes { get; set; }
+
+    public void AdotarMascotes(Mascote pokemon)
     {
-        Mascotes.Add(mascote);
+        Mascotes.Add(pokemon);
     }
     public void MostrarMascotesAdotados()
     {
