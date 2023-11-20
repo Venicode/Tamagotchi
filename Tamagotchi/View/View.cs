@@ -1,4 +1,6 @@
-﻿class Menu
+﻿using System.Xml.Linq;
+
+class Menu
 {
     public string NomeUsuario { get; set; }
 
@@ -30,9 +32,9 @@
 
     public static void MostrarPokemonsDisponiveis(List<Results> especies)
     {
-        foreach (var item in especies)
+        for (int i = 1; i < especies.Count; i++)
         {
-            Console.WriteLine($"    {item.Name}");
+            Console.WriteLine($" {i}   {especies[i].Name}");
         }
       
     }
